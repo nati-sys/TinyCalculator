@@ -27,11 +27,10 @@ static int ReadOperand(string title)
     while (!int.TryParse(Console.ReadLine(), out a))
     {
         Console.ForegroundColor = ConsoleColor.Red;
-        Console.WriteLine("FEHELER: Operand 1 ist keine Zahl.");
+        Console.WriteLine($"FEHELER: {title} ist keine Zahl.");
         Console.ResetColor();
         Console.ForegroundColor = ConsoleColor.Magenta;
-        Console.Write("1. Operand: ");
-        Console.ResetColor();
+        Console.Write($"{title}: ");
     }
     return a;
 }
