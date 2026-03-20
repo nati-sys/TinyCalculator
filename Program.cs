@@ -23,8 +23,8 @@ else
 static int ReadOperand(string title)
 {
     Console.Write($"{title}: ");
-    int a;
-    while (!int.TryParse(Console.ReadLine(), out a))
+    int operand;
+    while (!int.TryParse(Console.ReadLine(), out operand))
     {
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine($"FEHELER: {title} ist keine Zahl.");
@@ -32,5 +32,5 @@ static int ReadOperand(string title)
         Console.ForegroundColor = ConsoleColor.Magenta;
         Console.Write($"{title}: ");
     }
-    return a;
+    return operand;
 }
