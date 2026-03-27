@@ -8,12 +8,30 @@ using System;
 using System.Globalization;
 using System;
 using System.Globalization;
-using System;
+	using System;
 using System.Globalization;
 using System.Text;
 
 Console.WriteLine("== Tiny calculator ==");
 Console.OutputEncoding = Encoding.UTF8;
+<<<<<<< HEAD
+=======
+Console.ForegroundColor = ConsoleColor.Magenta;
+int a = ReadOperand("Operand 1");
+int b = ReadOperand("Operand 2");
+Console.ResetColor();
+Console.ForegroundColor = ConsoleColor.Cyan;
+Console.WriteLine($"{a} + {b} = {a + b}");
+Console.ForegroundColor = ConsoleColor.Yellow;
+Console.WriteLine($"{a} - {b} = {a - b}");
+Console.ForegroundColor = ConsoleColor.Red;
+Console.WriteLine($"{a} * {b} = {a * b}");
+Console.ForegroundColor = ConsoleColor.Blue;
+Console.WriteLine($"{a} / {b} = {(double)a / b}");
+Console.ForegroundColor = ConsoleColor.DarkMagenta;
+Console.WriteLine($"{a} ^ {b} = {Math.Pow(a,b)}");
+Console.ResetColor();
+>>>>>>> refs/remotes/origin/main
 
 RunCalculator();
 
@@ -97,8 +115,6 @@ static double[] PrintResults(double a, double b)
 	Console.WriteLine($"3) {FormatNumber(a)} * {FormatNumber(b)} = {FormatNumber(mul)}");
 	Console.ForegroundColor = ConsoleColor.Blue;
 	Console.WriteLine($"4) {FormatNumber(a)} / {FormatNumber(b)} = {FormatNumber(div)}");
-	Console.ResetColor();
-	Console.WriteLine($"{a} ^ {b} = {Math.Pow(a,b)}");
 	Console.ResetColor();
 
 	return new[] { add, sub, mul, div };
