@@ -15,6 +15,9 @@ Console.ForegroundColor = ConsoleColor.Red;
 Console.WriteLine($"{a} * {b} = {a * b}");
 Console.ForegroundColor = ConsoleColor.Blue;
 Console.WriteLine($"{a} / {b} = {(double)a / b}");
+Console.ForegroundColor = ConsoleColor.DarkMagenta;
+Console.WriteLine($"{a} ^ {b} = {Math.Pow(a,b)}");
+Console.ResetColor();
 
 static int ReadOperand(string title)
 {
